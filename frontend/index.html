@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TourAid – Tourist Safety Monitoring</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">🛡️ TourAid</div>
+    <p class="tagline">Tourist Safety Monitoring System</p>
+  </header>
+
+  <!-- Alert Banner -->
+  <div id="alertBanner" class="alert-banner hidden"></div>
+
+  <!-- Main Dashboard -->
+  <main class="container">
+
+    <!-- Status Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <h3 id="totalTourists">--</h3>
+        <p>Total Tourists</p>
+      </div>
+      <div class="stat-card emergency">
+        <h3 id="activeAlerts">--</h3>
+        <p>Active Alerts</p>
+      </div>
+      <div class="stat-card safe">
+        <h3 id="resolvedAlerts">--</h3>
+        <p>Resolved Today</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="onDutyOfficers">--</h3>
+        <p>Officers On Duty</p>
+      </div>
+    </section>
+
+    <!-- Emergency Alert Button -->
+    <section class="emergency-section">
+      <h2>Emergency Alert</h2>
+      <div class="alert-buttons">
+        <button class="btn-panic" onclick="sendAlert('panic')">🚨 PANIC</button>
+        <button class="btn-medical" onclick="sendAlert('medical')">🏥 MEDICAL</button>
+        <button class="btn-crime" onclick="sendAlert('crime')">🚔 CRIME</button>
+        <button class="btn-lost" onclick="sendAlert('lost')">📍 LOST</button>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+      <h2>Live Location Map</h2>
+      <div id="map" class="map-container">
+        <p class="map-placeholder">📍 Enable location to view live map</p>
+      </div>
+      <button class="btn-location" onclick="shareLocation()">📡 Share My Location</button>
+    </section>
+
+    <!-- Active Alerts List -->
+    <section class="alerts-section">
+      <h2>Active Alerts</h2>
+      <div id="alertsList" class="alerts-list">
+        <p class="loading">Loading alerts...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>TourAid – Built by Darunraaj M &nbsp;|&nbsp; Emergency: 100 (Police) / 108 (Ambulance)</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/alerts.js"></script>
+</body>
+</html>
+
