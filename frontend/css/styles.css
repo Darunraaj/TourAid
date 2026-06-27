@@ -1,0 +1,152 @@
+/* TourAid – Tourist Safety Monitoring System */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f4f8;
+  color: #2d3748;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #1a365d, #2b6cb0);
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+}
+.logo { font-size: 28px; font-weight: 700; letter-spacing: 1px; }
+.tagline { font-size: 13px; opacity: 0.8; margin-top: 4px; }
+
+/* Alert Banner */
+.alert-banner {
+  background: #e53e3e;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  font-weight: 600;
+}
+.hidden { display: none; }
+
+/* Container */
+.container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-top: 4px solid #2b6cb0;
+}
+.stat-card.emergency { border-top-color: #e53e3e; }
+.stat-card.safe { border-top-color: #38a169; }
+.stat-card h3 { font-size: 36px; font-weight: 700; color: #1a365d; }
+.stat-card p { font-size: 13px; color: #718096; margin-top: 6px; }
+
+/* Emergency Buttons */
+.emergency-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.emergency-section h2 { margin-bottom: 16px; color: #1a365d; }
+.alert-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.alert-buttons button {
+  flex: 1; min-width: 120px;
+  padding: 16px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.2s;
+}
+.alert-buttons button:active { transform: scale(0.97); }
+.btn-panic   { background: #e53e3e; color: white; }
+.btn-medical { background: #3182ce; color: white; }
+.btn-crime   { background: #744210; color: white; }
+.btn-lost    { background: #d69e2e; color: white; }
+
+/* Map */
+.map-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.map-section h2 { margin-bottom: 16px; color: #1a365d; }
+.map-container {
+  background: #ebf8ff;
+  border: 2px dashed #90cdf4;
+  border-radius: 10px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-placeholder { color: #4a5568; font-size: 15px; }
+.btn-location {
+  margin-top: 14px;
+  padding: 12px 24px;
+  background: #2b6cb0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-location:hover { background: #1a365d; }
+
+/* Alerts List */
+.alerts-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.alerts-section h2 { margin-bottom: 16px; color: #1a365d; }
+.alert-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-left: 5px solid #e53e3e;
+}
+.alert-item.medical { border-left-color: #3182ce; }
+.alert-item.crime   { border-left-color: #744210; }
+.alert-item.lost    { border-left-color: #d69e2e; }
+.alert-type { font-weight: 700; text-transform: uppercase; font-size: 12px; color: #718096; }
+.alert-name { font-size: 15px; font-weight: 600; margin: 4px 0; }
+.alert-location { font-size: 13px; color: #4a5568; }
+.alert-priority {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 6px;
+  background: #fed7d7;
+  color: #c53030;
+}
+.loading { color: #718096; text-align: center; padding: 20px; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #718096;
+  font-size: 13px;
+  margin-top: 40px;
+}
